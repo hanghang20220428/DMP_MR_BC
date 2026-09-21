@@ -1,0 +1,34 @@
+Version: 1.0
+Type: software
+Title: 4DMP-MR-BC - causal and druggable discovery in breast cancer
+       from blood DNA methylation
+Abstract: >-
+  Analysis code for an integrated study combining differential methylation
+  analysis, cis-meQTL Mendelian randomisation, colocalisation, a phenome-wide
+  screen, plasma-proteomic mediation analysis and single-cell transcriptomic
+  contextualisation in breast cancer.
+Authors:
+  - family-names: ""
+    given-names: ""
+    affiliation: ""
+Keywords:
+  - Mendelian randomization
+  - DNA methylation
+  - meQTL
+  - colocalization
+  - breast cancer
+  - single-cell RNA-seq
+  - mediation analysis
+License: MIT
+Repository: <REPOSITORY URL>
+Date-released: 2026-01-01
+References:
+  - type: article
+    title: "A single-cell RNA expression atlas of normal, preneoplastic and
+            tumorigenic states in the human breast"
+    authors:
+      - family-names: Pal
+        given-names: B
+    doi: 10.15252/embj.2020107333
+    journal: EMBO Journal
+    year: 2021

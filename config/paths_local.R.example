@@ -1,0 +1,65 @@
+# ===========================================================================
+#  config/paths_local.R.example
+#
+#  Copy this file to config/paths_local.R and edit it to point at your own
+#  copies of the source data.  config/paths_local.R is git-ignored, so no
+#  machine-specific path ends up in the published repository.
+#
+#  Every variable below takes precedence over the default in config.R, and
+#  is itself overridden by the corresponding environment variable
+#  (DMPMR_<UPPERCASE NAME>, e.g. DMPMR_BCAC_SUS_META).
+#
+#  ENCODING -- please keep this file ASCII-only where you can, and if any
+#  data directory really does contain non-ASCII characters, save the file as
+#  UTF-8 (no BOM).  config.R loads it with a UTF-8-aware reader that falls
+#  back gracefully on machines whose native R locale is not UTF-8, but a file
+#  re-saved in a legacy codepage (e.g. GBK/CP936) cannot be recovered.
+# ===========================================================================
+
+# ---- Reference / software ------------------------------------------------
+plink_bfile <- "D:/1kg.v3/EUR"
+plink_bin   <- "D:/Program files/plink_win64_20230116/plink.exe"
+
+# ---- Discovery cohort ----------------------------------------------------
+gse104942_matrix <- "data/GSE104942/GSE104942_series_matrix.txt.gz"
+
+# ---- GoDMC cis-meQTL -----------------------------------------------------
+godmc_assoc        <- "data/GoDMC/assoc_meta_all.csv.gz"
+godmc_snps         <- "data/GoDMC/snps.csv.gz"
+godmc_exposure_dir <- "data/GoDMC/GoDMC_as_exp"
+
+# ---- FinnGen R11 ---------------------------------------------------------
+finngen_bc_raw       <- "data/FinnGen_R11/finngen_R11_C3_BREAST_EXALLC.gz"
+finngen_manifest     <- "data/FinnGen_R11/finngen_R11_manifest.csv"
+finngen_bc_outcome   <- "data/FinnGen_R11/C3_BREAST_EXALLC_finndataR11_as_outcome.rdata"
+finngen_bc_coloc     <- "data/FinnGen_R11/finndataR11_BC_as_coloc.rdata"
+finngen_all_outcomes <- "data/FinnGen_R11/all_outcome_rdata"
+
+# ---- BCAC ----------------------------------------------------------------
+bcac_sus_meta  <- "data/BCAC/1BCAC_sus_2020_meta.rdata"
+bcac_sus_raw   <- "data/BCAC/icogs_onco_gwas_meta_overall_breast_cancer_summary_level_statistics.txt"
+bcac_sus_coloc <- "data/BCAC/2BCAC_2020_suscep_as_coloc.rdata"
+
+# ---- Third breast-cancer outcome ----------------------------------------
+gcst90011804_raw     <- "data/PanCancer17/32887889-GCST90011804-EFO_0000305-Build37.f.tsv.gz"
+gcst90011804_outcome <- "data/PanCancer17/GCST90011804_as_outcome.rdata"
+pancancer_info       <- "data/PanCancer17/pancancer17_info.rdata"
+pancancer_dir        <- "data/PanCancer17"
+gwas_catalog_dir     <- "data/GwasCatalog"
+snp_eaf_eur          <- "data/reference/0snp_eaf_eur_ALFA.rdata"
+
+# ---- UKB-PPP plasma proteomics ------------------------------------------
+ukbppp_outcome_dir  <- "data/UKB_PPP/2940UK_pQTL_Outcome"
+ukbppp_exposure_dir <- "data/UKB_PPP/2940UK_pQTL_Exposure6SNP"
+
+# ---- Single-cell (GSE161529) --------------------------------------------
+# One sub-directory per GSM accession, each containing barcodes.tsv.gz,
+# features.tsv.gz and matrix.mtx.gz
+scrna_10x_root <- "data/GSE161529"
+
+# ---- Annotation ----------------------------------------------------------
+anno_450k      <- "data/manifest/GPL13534-11288.txt"
+anno_epic      <- "data/manifest/GPL21145-48548.txt"
+generef_grch37 <- "data/reference/GRCh37.87.geneloc_ref.rdata"
+generef_grch38 <- "data/reference/GRCh38.100.geneloc_ref.rdata"
+epic_meqtl     <- "data/reference/EPIC_meQTL.rdata"
